@@ -23,6 +23,11 @@ header{
   text-align: center;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
+}
+main{
+  display: flex;
+  flex-direction: column;
 }
 .splash{
   display: flex;
@@ -41,6 +46,8 @@ header{
   min-height: 480px;
   width: 100%;
   height: 100%;
+  animation: fade 1.9s linear;
+  animation-fill-mode: forwards;
 }
 .splash img{  
   position: absolute;
@@ -52,13 +59,13 @@ header{
   /* transform: translate3d(0,25%,0); */
 }
 .top{
-  animation: down 1s cubic-bezier(0.13, 0.82, 0.02, 1.05);
+  animation: down 2s cubic-bezier(0.13, 0.82, 0.02, 1.05);
   animation-fill-mode: forwards;
 }
 .bottom{
   position: absolute;
   bottom: 0;
-  animation: up 1s cubic-bezier(0.13, 0.82, 0.02, 1.05);
+  animation: up 2s cubic-bezier(0.13, 0.82, 0.02, 1.05);
   animation-fill-mode: forwards;
 }
 /* .flip-down{
@@ -67,14 +74,42 @@ header{
   animation-fill-mode: forwards;
 } */
 
+.top-card{
+  background:rgb(32, 32, 32);
+  z-index: 2;
+}
+.bot-card{
+  background:rgb(32, 32, 32);
+}
+.aa-logo{
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+figure{
+  text-align: center;
+  justify-content: center;
+}
+a:hover{
+  animation: spin .5s linear;
+}
+.aa-logo:hover{
+  animation: spin .5s linear;
+}
+@keyframes spin{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(180deg);
+  }
+}
+
 @keyframes fade{
   0%{
-    opacity: 0;
-  }
-  10%{
     opacity: 100;
   }
-  90%{
+  75%{
     opacity: 100;
   }
   100%{
@@ -85,15 +120,27 @@ header{
 @keyframes down{
   0% {
     top: 0;
-    transform: rotate(180deg);
+    transform: rotateZ(180deg);
   }
-  55% {
+  25% {
     top: 40%;
     transform: rotateZ(180deg);
   }
-  100%{
+  50%{
     top: 35%;
     transform: rotateZ(360deg);
+  }
+  70%{
+    top: 35%;
+    transform: rotateZ(360deg);
+    opacity: 100;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    transform: rotateZ(1deg);
+    opacity: 0;
   }
 }
 
@@ -104,13 +151,25 @@ header{
     transform: rotateZ(180deg);
     
   }
-  55%{
+  25%{
     bottom: 40%;
     transform: rotateZ(180deg);
   }
-  100% {
+  50% {
     bottom: 34.75%;
     transform: rotateZ(0deg);
+  }
+  70% {
+    bottom: 34.75%;
+    transform: rotateZ(0deg);
+    opacity: 100;
+  }
+  90%{
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(360deg);
+    opacity: 0;
   }
 }
 
