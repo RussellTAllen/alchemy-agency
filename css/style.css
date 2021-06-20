@@ -33,14 +33,14 @@ header{
   overflow: hidden;
   z-index: 5;
   padding: 10px 0;
+  width: 100vw;
   height: 105px;
 }
 main{
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
   scroll-snap-type: mandatory;
-  width: 100vw;
+  width: 100%;
 }
 header>figure{
   flex: 1;
@@ -98,6 +98,10 @@ header nav a:hover{
   width: 30%;
   justify-self: flex-end;
 }
+section{
+  margin: 0;
+  padding: 0;
+}
 main section{
   background:rgb(32, 32, 32);
   font-size: 20px;
@@ -106,7 +110,7 @@ main section{
   scroll-margin: 30vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  width: 100vw;
+  width: 100%;
   margin: 80vh 0 0 0;
   padding: 10px 0;
 }
