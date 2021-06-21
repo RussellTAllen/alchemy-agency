@@ -223,6 +223,7 @@ figure.image-carousel{
   bottom: 50vh;
   text-align: center;
   font-size: 50px;
+  line-height: 7;
   text-shadow: 1px 1px 0 rgb(0, 0, 0);
 }
 .image-carousel .slide.active{
@@ -384,12 +385,6 @@ figure.image-carousel{
   }
 }
 /* cubic-bezier(0.075, 0.82, 0.165, 1) */
-
-
-
-
-
-
 
 /******************************************
 /* ADDITIONAL STYLES
