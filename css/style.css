@@ -19,10 +19,14 @@ body{
   flex-direction: column;
   /* background: rgb(44, 44, 44); */
   background: rgb(31,31,31);
-  background: radial-gradient(circle, rgba(31,31,31,1) 35%, rgba(48,48,48,1) 76%, rgba(57,57,57,1) 84%, rgba(75,74,74,1) 94%, rgba(82,82,82,1) 99%);
+  /* background: radial-gradient(circle, rgba(31,31,31,1) 35%, rgba(48,48,48,1) 76%, rgba(57,57,57,1) 84%, rgba(75,74,74,1) 94%, rgba(82,82,82,1) 99%); */
   color: rgb(219, 219, 219);
   margin: 0;
   padding: 0;
+}
+p{
+  font-family: 'Arsenal', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 header{
   display: flex;
@@ -39,7 +43,6 @@ header{
 main{
   display: flex;
   flex-direction: column;
-  scroll-snap-type: mandatory;
   width: 100%;
 }
 header>figure{
@@ -61,9 +64,10 @@ header nav{
   flex: 5;
   /* font-family: 'Barlow Condensed', sans-serif; */
   font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  margin: 0 40px;
+  margin: 0 100px;
 }
 a,
 header nav a,
@@ -108,28 +112,39 @@ main section{
   line-height: 1.5;
   z-index: 2;
   scroll-margin: 30vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   width: 100%;
-  margin: 80vh 0 0 0;
+  margin: 70vh 0 0 0;
   padding: 10px 0;
 }
-main section *:not(li){
+main section *:not(li),
+footer{
   font-family: 'Roboto', sans-serif;
+  font-family: 'Arsenal', sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding: 0 10%;
   letter-spacing: .5px;
 }
 main section h2{
   font-family: 'Cinzel', serif;
+  font-family: 'Syncopate', sans-serif;
   font-size: 40px;
-  letter-spacing: 5px;
+  font-weight: 500;
+  letter-spacing: 8px;
   text-align: center;
 }
-main section h3{
-  font-family: 'Bebas Neue', cursive;
-  letter-spacing: 3px;
+main section h3,
+main section h3 span{
+  font-family: 'Bungee Inline', cursive;
+  font-family: 'Arsenal';
+  font-family: 'Syncopate', sans-serif;
+  /* font-weight: bold; */
+  /* letter-spacing: 3px; */
 }
-
+main section h3 span{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
 main section a{
   margin-top: 20px;
   margin-bottom: 30px;
@@ -157,20 +172,33 @@ span+p+p{
   margin-top: 0px;
   margin-bottom: 25px;
 }
-#opportunities .underline{
+/* #opportunities .underline{
   text-decoration: underline;
-}
+} */
 #opportunities h4{
   margin-top: 30px;
   margin-bottom: 10px;
 }
 #opportunities p{
   margin: 5px 0;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
-#pay-rate h3{
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: normal;
+#pay-rate h3,
+#pay-rate h3>span{
+  /* font-size: 20px; */
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Montserrat', sans-serif; */
+  /* letter-spacing: normal; */
+  /* font-family: 'Raleway', sans-serif; */
+  font-weight: normal;
+  font-size: 20px;
+}
+#pay-rate h3>span{
+  font-weight: 600;
+}
+#pay-rate h4{
+  font-family: 'Syncopate', sans-serif;
+  font-size: 17px;
 }
 ol li{
   margin: 20px 0px 20px 50px;
@@ -178,21 +206,49 @@ ol li{
 #contact{
   display: flex;
   flex-direction: column;
-  margin-bottom: 30%;
+  margin-bottom: 35px;
+  padding: 10px 0 30px 0;
+}
+#contact h4{
+  text-align: center;
+  margin: -27px 0 33px 0;
+}
+main section#contact form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 650px;
+  margin: 0 auto;
+  padding: 0;
 }
 #contact input,
 #contact textarea,
 #contact button{
   display: block;
+  color: rgb(0, 0, 0);
+  font-family: 'Arsenal', sans-serif;
   margin: 15px auto;
+  padding: 5px 5px;
+  text-align: left;;
+}
+#contact button{
+  text-align: center;
+  margin: 0;
+  padding: 5px auto;
+  width: 100px;
+}
+#contact input{
+  width: 400px;
+  margin: 5px 0;
 }
 #contact textarea{
-  width: 447px;
+  width: 650px;
   height: 300px;
   resize: none
 }
 footer{
   text-align: center;
+  margin-bottom: 20px;
 }
 /*******************/
 /* IMAGE CAROUSEL */
@@ -221,10 +277,13 @@ figure.image-carousel{
   position: relative;
   z-index: 2;
   bottom: 50vh;
+  /* font-family: 'Antic Didone', serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   text-align: center;
   font-size: 50px;
   line-height: 7;
-  text-shadow: 1px 1px 0 rgb(0, 0, 0);
+  text-shadow: 2px 0px 1px rgb(0, 0, 0), -2px 0px 1px rgb(0, 0, 0), 0 2px 1px rgb(0, 0, 0), 0 -2px 1px rgb(0, 0, 0) ;
 }
 .image-carousel .slide.active{
   opacity: 100%;
