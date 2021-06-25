@@ -510,7 +510,7 @@ figure.image-carousel{
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 850px){
   main section{
     scroll-margin: 10vh;
   }
@@ -542,6 +542,7 @@ figure.image-carousel{
   header{
     width: 100%;
     align-content: space-between;
+    overflow: hidden;
   }
   header nav{
     justify-self: flex-end;
@@ -577,6 +578,10 @@ figure.image-carousel{
   /* .fas.fa-arrow-down+span {
     font-size: 12px;
   } */
+}
+
+@media (max-width: 768px){
+
 }
 
 @media (max-width: 375px){
