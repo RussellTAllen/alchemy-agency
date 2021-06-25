@@ -609,8 +609,6 @@ figure.image-carousel{
   and (orientation: portrait){
     .image-carousel .slide img{
       width: 100%;
-      height: 30vh;
+      height: 50vh;
     }
-
-
 }
