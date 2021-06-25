@@ -597,4 +597,8 @@ figure.image-carousel{
     height: 50vh;
     object-fit: cover;
   }
+  .image-carousel .slide span{
+    bottom: 20vh;
+    font-size: 22px;
+  }
 }
