@@ -234,6 +234,9 @@ span+p+p{
 ol li{
   margin: 20px 0px 20px 50px;
 }
+#location{
+  scroll-margin-top: 40vh;
+}
 #contact{
   display: flex;
   flex-direction: column;
@@ -508,17 +511,42 @@ figure.image-carousel{
 }
 
 @media (max-width: 768px){
+  main section{
+    scroll-margin: 10vh;
+  }
+  main section h2{
+    font-size: 90%;
+  }
+  main section ol li,
+  main section p{
+    font-size: 80%;
+  }
+  main section h3,
+  #pay-rate h3, 
+  #pay-rate h4,
+  #pay-rate h3>span{
+    font-size: 65%;
+  }
+  #contact{
+    padding: 25px 25px;
+  }
+  #contact h4{
+    margin: 0 0 20px 0;
+  }
   header figure{
     flex: 3;
   }
-
+  header{
+    width: 100%;
+    align-content: space-between;
+  }
   header nav{
     justify-self: flex-end;
     text-align: right;
   }
   
   header nav ul{
-    position: relative;
+    /* position: relative; */
     display: flex;
     /* display: none; */
     flex-direction: column;
@@ -526,13 +554,14 @@ figure.image-carousel{
     background:rgb(32, 32, 32);
     /* text-align: right; */
     top: 0;
-    right: 130px;
+    right: 0px;
   }
   header nav ul li{
     z-index: 3;
   }
   header nav .menu{
     display: block;
+    display: none;
     position: fixed;
     top: 15px;
     right: 25px;
@@ -542,5 +571,16 @@ figure.image-carousel{
   }
   .image-carousel .slide span{
     font-size: 26px;
+  }
+}
+
+@media (max-width: 375px){
+  body{
+    width: 153%;
+    margin: 0 auto;
+  }
+  main section,
+  .image-carousel .slide img{
+    width: 100%;
   }
 }
