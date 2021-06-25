@@ -611,4 +611,16 @@ figure.image-carousel{
       width: 100%;
       height: 50vh;
     }
+    .image-carousel .slide span{
+      bottom: 20vh;
+    }
+    .image-carousel .slide img.girls{
+      position: relative;
+      width: 120%;
+      right: 70px;
+    }
+    .image-carousel .slide img.girl{
+      position: relative;
+      width: 116%;
+    }
 }
