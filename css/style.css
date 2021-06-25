@@ -35,8 +35,8 @@ header{
   background:rgb(32, 32, 32);
   /* justify-content: center; */
   align-items: center;
-  /* overflow-x: hidden;
-  overflow-y: visible; */
+  overflow-x: hidden;
+  /* overflow-y: visible; */
   z-index: 5;
   padding: 10px 0;
   width: 100vw;
