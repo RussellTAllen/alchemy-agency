@@ -23,6 +23,7 @@ body{
   color: rgb(219, 219, 219);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 p{
   font-family: 'Arsenal', sans-serif;
@@ -34,7 +35,8 @@ header{
   background:rgb(32, 32, 32);
   /* justify-content: center; */
   align-items: center;
-  overflow: hidden;
+  /* overflow-x: hidden;
+  overflow-y: visible; */
   z-index: 5;
   padding: 10px 0;
   width: 100vw;
@@ -50,6 +52,7 @@ header>figure{
   margin-left: 20px;
   text-align: center;
   justify-content: center;
+  z-index: 4;
 }
 header a img.logo{
   display: inline-block;
@@ -60,24 +63,34 @@ header a img.logo{
 }
 header nav{
   display: flex;
-  justify-content: space-between;
-  flex: 5;
-  /* font-family: 'Barlow Condensed', sans-serif; */
+  flex: 7;
+  margin: 0 5% 0 1%;
+}
+header nav ul{
+  display: flex;
+  justify-content: space-around;
+  flex: 1 2 100%;
   font-family: 'Open Sans Condensed', sans-serif;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  margin: 0 100px;
+}
+header nav .menu{
+  display: none;
+}
+header nav ul li{
+  /* display: block; */
 }
 a,
-header nav a,
-header nav a:visited{
+header nav ul li a,
+header nav ul li a:visited{
+  /* display: block; */
   color: rgb(231, 231, 231);
   text-decoration: none;
   transition: .2s;
 }
 a:hover,
-header nav a:hover{
+header nav ul li a:hover{
   color: #FFD700;
   font-size: 102%;
   /* text-shadow: 1px 1px 0 orangered; */
@@ -113,7 +126,7 @@ main section{
   font-size: 20px;
   line-height: 1.5;
   z-index: 2;
-  scroll-margin: 30vh;
+  scroll-margin-top: 30vh;
   width: 100%;
   margin: 70vh 0 0 0;
   padding: 10px 0;
@@ -235,9 +248,13 @@ main section#contact form{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 650px;
+  width: 100%;
+  max-width: 650px;
   margin: 0 auto;
   padding: 0;
+}
+main section#contact form *{
+  justify-self: center;
 }
 #contact input,
 #contact textarea,
@@ -253,16 +270,19 @@ main section#contact form{
   text-align: center;
   margin: 0;
   padding: 5px auto;
-  width: 100px;
+  width: 100%;
+  max-width: 100px;
 }
 #contact input{
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 5px 0;
 }
 #contact textarea{
-  width: 650px;
+  width: 100%;
+  max-width: 650px;
   height: 300px;
-  resize: none
+  resize: none;
 }
 footer{
   text-align: center;
@@ -477,12 +497,50 @@ figure.image-carousel{
 
 @media (max-width: 1220px){
   header nav{
-    margin: 0 5%;
+    /* margin: 0 10% 0 1%; */
+  }
+}
+
+@media (max-width: 1050px){
+  header nav ul{
+    font-size: 15px;
   }
 }
 
 @media (max-width: 768px){
+  header figure{
+    flex: 3;
+  }
+
   header nav{
-    font-size: 14px;
+    justify-self: flex-end;
+    text-align: right;
+  }
+  
+  header nav ul{
+    position: relative;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    background:rgb(32, 32, 32);
+    /* text-align: right; */
+    top: 0;
+    right: 130px;
+  }
+  header nav ul li{
+    z-index: 3;
+  }
+  header nav .menu{
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 25px;
+  }
+  header nav a{
+    display: block;
+  }
+  .image-carousel .slide span{
+    font-size: 26px;
   }
 }
