@@ -518,14 +518,17 @@ figure.image-carousel{
     font-size: 90%;
   }
   main section ol li,
-  main section p{
+  main section p,
+  .fas.fa-arrow-down+span{
     font-size: 80%;
   }
   main section h3,
   #pay-rate h3, 
-  #pay-rate h4,
-  #pay-rate h3>span{
+  #pay-rate h4{
     font-size: 65%;
+  }
+  #pay-rate h3>span{
+    font-size: 100%;
   }
   #contact{
     padding: 25px 25px;
@@ -544,7 +547,6 @@ figure.image-carousel{
     justify-self: flex-end;
     text-align: right;
   }
-  
   header nav ul{
     /* position: relative; */
     display: flex;
@@ -572,6 +574,9 @@ figure.image-carousel{
   .image-carousel .slide span{
     font-size: 26px;
   }
+  /* .fas.fa-arrow-down+span {
+    font-size: 12px;
+  } */
 }
 
 @media (max-width: 375px){
