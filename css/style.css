@@ -595,10 +595,22 @@ figure.image-carousel{
   .image-carousel .slide img{
     width: 100%;
     height: 50vh;
-    object-fit: cover;
   }
   .image-carousel .slide span{
     bottom: 20vh;
     font-size: 22px;
   }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait){
+    .image-carousel .slide img{
+      width: 100%;
+      height: 30vh;
+    }
+
+
 }
