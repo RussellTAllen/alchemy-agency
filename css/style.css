@@ -18,7 +18,7 @@ body{
   display: flex;
   flex-direction: column;
   /* background: rgb(44, 44, 44); */
-  background: rgb(31,31,31);
+  background: rgb(32,32,32);
   /* background: radial-gradient(circle, rgba(31,31,31,1) 35%, rgba(48,48,48,1) 76%, rgba(57,57,57,1) 84%, rgba(75,74,74,1) 94%, rgba(82,82,82,1) 99%); */
   color: rgb(219, 219, 219);
   margin: 0;
@@ -74,12 +74,14 @@ header nav a,
 header nav a:visited{
   color: rgb(231, 231, 231);
   text-decoration: none;
-  transition: .3s;
+  transition: .2s;
 }
 a:hover,
 header nav a:hover{
+  color: #FFD700;
   font-size: 102%;
-  text-shadow: 1px 1px 0 orangered;
+  /* text-shadow: 1px 1px 0 orangered; */
+  /* text-shadow: 1px 1px 0 #FFD700; */
 }
 .portal .login{
   position: fixed;
@@ -123,6 +125,22 @@ footer{
   font-family: 'Raleway', sans-serif;
   padding: 0 10%;
   letter-spacing: .5px;
+}
+main section a{
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  width: 100%;
+}
+main section a:hover{
+  color: white;
+  text-shadow: 1px 0 0 #FFD700, 0 1px 0 #FFD700, -1px 0 0 #FFD700, 0 -1px 0 #FFD700;
+}
+.fas.fa-arrow-down{
+  padding-right: 10px;
+}
+.fas.fa-arrow-down+span{
+  font-size: 18px;
+  padding: 0;
 }
 main section h2{
   font-family: 'Cinzel', serif;
@@ -276,14 +294,14 @@ figure.image-carousel{
 .image-carousel .slide span{
   position: relative;
   z-index: 2;
-  bottom: 50vh;
+  bottom: 33vh;
   /* font-family: 'Antic Didone', serif; */
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   text-align: center;
   font-size: 50px;
-  line-height: 7;
-  text-shadow: 2px 0px 1px rgb(0, 0, 0), -2px 0px 1px rgb(0, 0, 0), 0 2px 1px rgb(0, 0, 0), 0 -2px 1px rgb(0, 0, 0) ;
+  /* line-height: 7; */
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), -1px -1px 2px rgb(0, 0, 0), -1px 1px 2px rgb(0, 0, 0), 1px -1px 2px rgb(0, 0, 0) ;
 }
 .image-carousel .slide.active{
   opacity: 100%;
@@ -294,7 +312,7 @@ figure.image-carousel{
 /*******************/
 .splash{
   display: flex;
-  background: rgb(31,31,31);
+  background: rgb(32,32,32);
   background: radial-gradient(circle, rgba(31,31,31,1) 35%, rgba(48,48,48,1) 76%, rgba(57,57,57,1) 84%, rgba(75,74,74,1) 94%, rgba(82,82,82,1) 99%);
   position: fixed;
   justify-content: center;
@@ -450,4 +468,21 @@ figure.image-carousel{
 /*******************************************/
 .hidden{
   display: none;
+}
+@media (max-width: 1430px){
+  .image-carousel .slide span{
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1220px){
+  header nav{
+    margin: 0 5%;
+  }
+}
+
+@media (max-width: 768px){
+  header nav{
+    font-size: 14px;
+  }
 }
