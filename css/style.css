@@ -140,7 +140,11 @@ footer{
   letter-spacing: .5px;
 }
 main section a{
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
+  font-style: oblique;
+  margin-top: 20px;
+  margin-bottom: 30px;
   padding: 0;
   width: 100%;
 }
@@ -176,24 +180,18 @@ main section h3 span{
   padding: 0;
   font-weight: bold;
 }
-main section a{
-  margin-top: 20px;
-  margin-bottom: 30px;
-  display: inline-block;
-  font-style: oblique;
-}
-main section p>a{
-  padding: 0;
-}
-#opportunities{
-  scroll-margin: 20vh;
-}
 ul li{
   list-style-type: none;
 }
 span+p,
 span+p+p{
   margin-left: 40px;
+}
+#about-alchemy{
+  margin-top: 90vh;
+}
+#opportunities{
+  scroll-margin: 20vh;
 }
 #opportunities h3{
   margin: 10px 0;
@@ -203,9 +201,6 @@ span+p+p{
   margin-top: 0px;
   margin-bottom: 25px;
 }
-/* #opportunities .underline{
-  text-decoration: underline;
-} */
 #opportunities h4{
   margin-top: 30px;
   margin-bottom: 10px;
