@@ -93,9 +93,9 @@ header nav ul li a:visited{
 }
 a:hover,
 header nav ul li a:hover{
-  color: #FFD700;
+  /* color: #FFD700; */
   font-size: 102%;
-  /* text-shadow: 1px 1px 0 orangered; */
+  text-shadow: 1px 1px 0 #8e0000;
   /* text-shadow: 1px 1px 0 #FFD700; */
 }
 .portal .login{
@@ -151,8 +151,9 @@ main section a{
   width: 100%;
 }
 main section a:hover{
-  color: white;
-  text-shadow: 1px 0 0 #FFD700, 0 1px 0 #FFD700, -1px 0 0 #FFD700, 0 -1px 0 #FFD700;
+  font-weight: bold;
+  /* color: white;
+  text-shadow: 1px 0 0 #FFD700, 0 1px 0 #FFD700, -1px 0 0 #FFD700, 0 -1px 0 #FFD700; */
 }
 .fas.fa-arrow-down{
   padding-right: 10px;
