@@ -175,6 +175,7 @@ main section h3 span{
   font-family: 'Bungee Inline', cursive;
   font-family: 'Arsenal';
   font-family: 'Syncopate', sans-serif;
+  font-family: 'Raleway', sans-serif;
   /* font-weight: bold; */
   /* letter-spacing: 3px; */
 }
@@ -226,8 +227,8 @@ span+p+p{
   font-weight: 600;
 }
 #pay-rate h4{
-  font-family: 'Syncopate', sans-serif;
-  font-size: 17px;
+  /* font-family: 'Syncopate', sans-serif; */
+  /* font-size: 17px; */
 }
 ol li{
   margin: 20px 0px 20px 50px;
@@ -517,14 +518,16 @@ figure.image-carousel{
     font-size: 90%;
   }
   main section ol li,
+  main section ul li,
   main section p,
+  main section span,
   .fas.fa-arrow-down+span{
     font-size: 80%;
   }
   main section h3,
   #pay-rate h3, 
   #pay-rate h4{
-    font-size: 65%;
+    font-size: 80%;
   }
   #pay-rate h3>span{
     font-size: 100%;
