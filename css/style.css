@@ -239,7 +239,7 @@ ol li{
 #contact{
   display: flex;
   flex-direction: column;
-  margin-bottom: 35px;
+  margin-bottom: 0;
   padding: 10px 0 30px 0;
 }
 #contact h4{
@@ -287,8 +287,13 @@ main section#contact form *{
   resize: none;
 }
 footer{
+  /* position: fixed; */
+  /* bottom: 0; */
+  background: rgb(32, 32, 32);
+  z-index: 2;
   text-align: center;
-  margin-bottom: 20px;
+  height: 60px;
+  padding: 20px;
 }
 /*******************/
 /* IMAGE CAROUSEL */
