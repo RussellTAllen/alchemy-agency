@@ -1,6 +1,6 @@
 # Alchemy Agency, LLC website
 - https://www.alchemyagencyllc.com 
-OR 
+- OR 
 - https://www.alchemyagencyentertainment.com
 
 - This website was designed, developed, and deployed by myself
