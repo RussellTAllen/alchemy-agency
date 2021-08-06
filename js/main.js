@@ -1,9 +1,35 @@
 const portalBtn = document.querySelector('.portal-btn')
 const login = document.querySelector('.login')
 const slides = document.querySelectorAll('.slide')
+const menuBtn = document.querySelector('.menu')
+const menuContainer = document.querySelector('.menu-links')
+const menuLinks = menuContainer.childNodes
+const logoLink = document.querySelector('.logo')
 let currentSlide = 1
 
 portalBtn.addEventListener('click', portalDropdown)
+logoLink.addEventListener('click', contractMenu)
+menuBtn.addEventListener('click', expandMenu)
+menuLinks.forEach(el => {
+    el.addEventListener('click', contractMenu)
+})
+
+function expandMenu(){
+    console.log('menu expanding...')
+    // menuBtn.classList.add('hidden')
+    menuContainer.style.display = 'flex'
+    menuContainer.style.top = '50px'
+    menuBtn.removeEventListener('click', expandMenu)
+    menuBtn.addEventListener('click', contractMenu)
+    
+    
+}
+
+function contractMenu(){
+    menuContainer.style.top = '-100vh'
+    // menuContainer.style.display = 'none'
+    menuBtn.addEventListener('click', expandMenu)
+}
 
 function rotateImages(){
     let active = document.getElementsByClassName('active')
