@@ -43,6 +43,7 @@ function expandMenu(){
 function contractMenu(){
     menuContainer.style.top = '-100vh'
     // menuContainer.style.display = 'none'
+    menuBtn.removeEventListener('click', contractMenu)
     menuBtn.addEventListener('click', expandMenu)
 }
 
