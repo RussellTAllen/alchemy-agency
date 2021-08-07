@@ -5,6 +5,7 @@ const menuBtn = document.querySelector('.menu')
 const menuContainer = document.querySelector('.menu-links')
 const menuLinks = menuContainer.childNodes
 const logoLink = document.querySelector('.logo')
+const loginBox = document.querySelector('.login')
 let currentSlide = 1
 
 portalBtn.addEventListener('click', portalDropdown)
@@ -19,6 +20,10 @@ menuContainer.addEventListener('touchstart', () => {});
 menuContainer.addEventListener('touchend', () => {});
 menuContainer.addEventListener('touchcancel', () => {});
 menuContainer.addEventListener('touchmove', () => {});
+loginBox.addEventListener('touchstart', () => {});
+loginBox.addEventListener('touchend', () => {});
+loginBox.addEventListener('touchcancel', () => {});
+loginBox.addEventListener('touchmove', () => {});
 
 function expandMenu(){
     console.log('menu expanding...')
