@@ -14,6 +14,12 @@ menuLinks.forEach(el => {
     el.addEventListener('click', contractMenu)
 })
 
+// Safari hack to prevent the need to double-touch links
+menuContainer.addEventListener('touchstart', () => {});
+menuContainer.addEventListener('touchend', () => {});
+menuContainer.addEventListener('touchcancel', () => {});
+menuContainer.addEventListener('touchmove', () => {});
+
 function expandMenu(){
     console.log('menu expanding...')
     // menuBtn.classList.add('hidden')
