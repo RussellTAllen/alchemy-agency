@@ -1,3 +1,6 @@
+// Maybe making the "click" events touch events to fix the safari issue...
+// https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
+
 const portalBtn = document.querySelector('.portal-btn')
 const login = document.querySelector('.login')
 const slides = document.querySelectorAll('.slide')
@@ -13,13 +16,14 @@ logoLink.addEventListener('click', contractMenu)
 menuBtn.addEventListener('click', expandMenu)
 menuLinks.forEach(el => {
     el.addEventListener('click', contractMenu)
+    el.addEventListener('touchstart', contractMenu)
 })
 
 // Safari hack to prevent the need to double-touch links
-window.addEventListener('touchstart', () => {})
-window.addEventListener('touchend', () => {})
-window.addEventListener('touchcancel', () => {})
-window.addEventListener('touchmove', () => {})
+// window.addEventListener('touchstart', () => {})
+// window.addEventListener('touchend', () => {})
+// window.addEventListener('touchcancel', () => {})
+// window.addEventListener('touchmove', () => {})
 // menuContainer.addEventListener('touchstart', () => {})
 // menuContainer.addEventListener('touchend', () => {})
 // menuContainer.addEventListener('touchcancel', () => {})
