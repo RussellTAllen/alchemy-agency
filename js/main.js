@@ -16,14 +16,18 @@ menuLinks.forEach(el => {
 })
 
 // Safari hack to prevent the need to double-touch links
-menuContainer.addEventListener('touchstart', () => {});
-menuContainer.addEventListener('touchend', () => {});
-menuContainer.addEventListener('touchcancel', () => {});
-menuContainer.addEventListener('touchmove', () => {});
-loginBox.addEventListener('touchstart', () => {});
-loginBox.addEventListener('touchend', () => {});
-loginBox.addEventListener('touchcancel', () => {});
-loginBox.addEventListener('touchmove', () => {});
+window.addEventListener('touchstart', () => {})
+window.addEventListener('touchend', () => {})
+window.addEventListener('touchcancel', () => {})
+window.addEventListener('touchmove', () => {})
+// menuContainer.addEventListener('touchstart', () => {})
+// menuContainer.addEventListener('touchend', () => {})
+// menuContainer.addEventListener('touchcancel', () => {})
+// menuContainer.addEventListener('touchmove', () => {})
+// loginBox.addEventListener('touchstart', () => {})
+// loginBox.addEventListener('touchend', () => {})
+// loginBox.addEventListener('touchcancel', () => {})
+// loginBox.addEventListener('touchmove', () => {})
 
 function expandMenu(){
     console.log('menu expanding...')
