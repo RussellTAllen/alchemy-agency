@@ -202,8 +202,7 @@ span+p+p{
 }
 #opportunities h3+span{
   display: inline-block;
-  margin-top: 0px;
-  margin-bottom: 25px;
+  margin: 0;
 }
 #opportunities h4{
   margin-top: 30px;

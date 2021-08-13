@@ -16,14 +16,13 @@ logoLink.addEventListener('click', contractMenu)
 menuBtn.addEventListener('click', expandMenu)
 menuLinks.forEach(el => {
     el.addEventListener('click', contractMenu)
-    el.addEventListener('touchstart', contractMenu)
 })
 
 // Safari hack to prevent the need to double-touch links
-// window.addEventListener('touchstart', () => {})
-// window.addEventListener('touchend', () => {})
-// window.addEventListener('touchcancel', () => {})
-// window.addEventListener('touchmove', () => {})
+window.addEventListener('touchstart', () => {})
+window.addEventListener('touchend', () => {})
+window.addEventListener('touchcancel', () => {})
+window.addEventListener('touchmove', () => {})
 // menuContainer.addEventListener('touchstart', () => {})
 // menuContainer.addEventListener('touchend', () => {})
 // menuContainer.addEventListener('touchcancel', () => {})
