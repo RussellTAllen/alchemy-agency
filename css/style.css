@@ -17,9 +17,7 @@ html{
 body{
   display: flex;
   flex-direction: column;
-  /* background: rgb(44, 44, 44); */
   background: rgb(32,32,32);
-  /* background: radial-gradient(circle, rgba(31,31,31,1) 35%, rgba(48,48,48,1) 76%, rgba(57,57,57,1) 84%, rgba(75,74,74,1) 94%, rgba(82,82,82,1) 99%); */
   color: rgb(219, 219, 219);
   margin: 0;
   padding: 0;
@@ -33,10 +31,8 @@ header{
   display: flex;
   position: fixed;
   background:rgb(32, 32, 32);
-  /* justify-content: center; */
   align-items: center;
   overflow-x: hidden;
-  /* overflow-y: visible; */
   z-index: 5;
   padding: 10px 0;
   width: 100vw;
@@ -69,7 +65,7 @@ header nav{
 }
 header nav ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex: 1 2 100%;
   font-family: 'Open Sans Condensed', sans-serif;
   font-family: 'Raleway', sans-serif;
@@ -86,17 +82,14 @@ header nav ul{
 a,
 header nav ul li a,
 header nav ul li a:visited{
-  /* display: block; */
   color: rgb(231, 231, 231);
   text-decoration: none;
   transition: .2s;
 }
 a:hover,
 header nav ul li a:hover{
-  /* color: #FFD700; */
   font-size: 102%;
   text-shadow: 1px 1px 0 #8e0000;
-  /* text-shadow: 1px 1px 0 #FFD700; */
 }
 .portal .login{
   position: fixed;
@@ -106,7 +99,6 @@ header nav ul li a:hover{
 .portal .login button,
 .portal .login input{
   display: block;
-  /* width: 70%; */
   justify-self: flex-end;
   align-self: flex-end;
 }
@@ -152,8 +144,6 @@ main section a{
 }
 main section a:hover{
   font-weight: bold;
-  /* color: white;
-  text-shadow: 1px 0 0 #FFD700, 0 1px 0 #FFD700, -1px 0 0 #FFD700, 0 -1px 0 #FFD700; */
 }
 .fas.fa-arrow-down{
   padding-right: 10px;
@@ -163,7 +153,6 @@ main section a:hover{
   padding: 0;
 }
 main section h2{
-  font-family: 'Cinzel', serif;
   font-family: 'Syncopate', sans-serif;
   font-size: 40px;
   font-weight: 500;
@@ -172,12 +161,7 @@ main section h2{
 }
 main section h3,
 main section h3 span{
-  font-family: 'Bungee Inline', cursive;
-  font-family: 'Arsenal';
-  font-family: 'Syncopate', sans-serif;
   font-family: 'Raleway', sans-serif;
-  /* font-weight: bold; */
-  /* letter-spacing: 3px; */
 }
 main section h3 span{
   margin: 0;
@@ -213,25 +197,16 @@ span+p+p{
 }
 #opportunities p{
   margin: 5px 0;
-  /* margin-left: 40px; */
 }
 #pay-rate h3,
 #pay-rate h3>span{
-  /* font-size: 20px; */
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Montserrat', sans-serif; */
-  /* letter-spacing: normal; */
-  /* font-family: 'Raleway', sans-serif; */
   font-weight: normal;
   font-size: 20px;
 }
 #pay-rate h3>span{
   font-weight: 600;
 }
-#pay-rate h4{
-  /* font-family: 'Syncopate', sans-serif; */
-  /* font-size: 17px; */
-}
+
 ol li{
   margin: 20px 0px 20px 50px;
 }
@@ -289,8 +264,6 @@ main section#contact form *{
   resize: none;
 }
 footer{
-  /* position: fixed; */
-  /* bottom: 0; */
   background: rgb(32, 32, 32);
   z-index: 2;
   text-align: center;
@@ -324,173 +297,16 @@ figure.image-carousel{
   position: relative;
   z-index: 2;
   bottom: 33vh;
-  /* font-family: 'Antic Didone', serif; */
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   text-align: center;
   font-size: 50px;
-  /* line-height: 7; */
   text-shadow: 1px 1px 2px rgb(0, 0, 0), -1px -1px 2px rgb(0, 0, 0), -1px 1px 2px rgb(0, 0, 0), 1px -1px 2px rgb(0, 0, 0) ;
 }
 .image-carousel .slide.active{
   opacity: 100%;
 }
 
-/*********************/
-/* SPLASH ANIMATION */
-/*******************/
-.splash{
-  display: flex;
-  background: rgb(32,32,32);
-  background: radial-gradient(circle, rgba(31,31,31,1) 35%, rgba(48,48,48,1) 76%, rgba(57,57,57,1) 84%, rgba(75,74,74,1) 94%, rgba(82,82,82,1) 99%);
-  position: fixed;
-  justify-content: center;
-  align-content: center;
-  text-align: center; 
-  top: 0;
-  left: 0;
-  margin: auto;
-  padding: auto 0;
-  z-index: 100;
-  min-height: 480px;
-  width: 100%;
-  height: 100%;
-  animation: fade 1.9s linear;
-  animation-fill-mode: forwards;
-}
-.splash img{  
-  position: absolute;
-  /* width: 100%; */
-  margin: auto;
-  cursor: default;
-  pointer-events: none;
-  /* animation: fade 2s linear; */
-  /* transform: translate3d(0,25%,0); */
-}
-.top{
-  animation: down 2s cubic-bezier(0.13, 0.82, 0.02, 1.05);
-  animation-fill-mode: forwards;
-}
-.bottom{
-  position: absolute;
-  bottom: 0;
-  animation: up 2s cubic-bezier(0.13, 0.82, 0.02, 1.05);
-  animation-fill-mode: forwards;
-}
-/* .flip-down{
-  animation-delay: 10s;
-  animation: flipdown 3s linear;
-  animation-fill-mode: forwards;
-} */
-.top-card{
-  background:rgb(32, 32, 32);
-  z-index: 2;
-}
-.bot-card{
-  background:rgb(32, 32, 32);
-}
-.aa-logo{
-  display: block;
-  justify-content: center;
-  text-align: center;
-}
-.aa-logo:hover{
-  animation: spin .5s linear;
-}
-@keyframes spin{
-  0%{
-    transform: rotateZ(0deg);
-  }
-  100%{
-    transform: rotateZ(180deg);
-  }
-}
-@keyframes fade{
-  0%{
-    opacity: 100;
-  }
-  75%{
-    opacity: 100;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-@keyframes down{
-  0% {
-    top: 0;
-    transform: rotateZ(180deg);
-  }
-  25% {
-    /* top: 40%; */
-    top: 40vh;
-    transform: rotateZ(180deg);
-  }
-  50%{
-    /* top: 35%; */
-    top: 35vh;
-    transform: rotateZ(360deg);
-  }
-  70%{
-    /* top: 35%; */
-    top: 35vh;
-    transform: rotateZ(360deg);
-    opacity: 100;
-  }
-  90%{
-    opacity: 0;
-  }
-  100%{
-    /* This was added */
-    top: 50vh;
-    transform: rotateZ(1deg);
-    opacity: 0;
-  }
-}
-@keyframes up{
-  0%{
-    bottom: 0;
-    transform: rotateZ(180deg);
-    
-  }
-  25%{
-    /* bottom: 40%; */
-    bottom: 40vh;
-    transform: rotateZ(180deg);
-  }
-  50% {
-    /* bottom: 34.75%; */
-    bottom: 34.75vh;
-    transform: rotateZ(0deg);
-  }
-  70% {
-    /* bottom: 34.75%; */
-    bottom: 34.75vh;
-    transform: rotateZ(0deg);
-    opacity: 100;
-  }
-  90%{
-    opacity: 0;
-  }
-  100% {
-    /* this was added */
-    bottom: 50vh;
-    transform: rotateZ(360deg);
-    opacity: 0;
-  }
-}
-
-@keyframes flipdown{
-  0%{
-    transform: rotateY(0deg);
-    opacity: 100;
-  }
-  100%{
-    transform: rotateY(360deg);
-    opacity: 0;
-  }
-}
-/* cubic-bezier(0.075, 0.82, 0.165, 1) */
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -556,7 +372,6 @@ figure.image-carousel{
   }
   header nav ul.menu-links{
     display: flex;
-    /* display: none; */
     flex-direction: column;
     background:rgb(32, 32, 32);
     top: -100vh;
@@ -587,7 +402,6 @@ figure.image-carousel{
   }
   header nav .menu:hover{
     color: rgb(231, 231, 231);
-    /* font-size: 502%; */
     text-shadow: 1px 1px 0 white;
   }
   header nav a{
