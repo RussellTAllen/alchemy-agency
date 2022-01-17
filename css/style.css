@@ -91,26 +91,6 @@ header nav ul li a:hover{
   font-size: 102%;
   text-shadow: 1px 1px 0 #8e0000;
 }
-.portal .login{
-  position: fixed;
-  top: 80px;
-  right: 10px;
-}
-.portal .login button,
-.portal .login input{
-  display: block;
-  justify-self: flex-end;
-  align-self: flex-end;
-}
-.portal .login form{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.portal .login button{
-  width: 30%;
-  justify-self: flex-end;
-}
 section{
   margin: 0;
   padding: 0;

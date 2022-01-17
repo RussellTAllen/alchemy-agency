@@ -1,7 +1,6 @@
 // Maybe making the "click" events touch events to fix the safari issue...
 // https://stackoverflow.com/questions/24077725/mobile-safari-sometimes-does-not-trigger-the-click-event
 
-const portalBtn = document.querySelector('.portal-btn')
 const login = document.querySelector('.login')
 const slides = document.querySelectorAll('.slide')
 const menuBtn = document.querySelector('.menu')
@@ -11,7 +10,6 @@ const logoLink = document.querySelector('.logo')
 const loginBox = document.querySelector('.login')
 let currentSlide = 1
 
-portalBtn.addEventListener('click', portalDropdown)
 logoLink.addEventListener('click', contractMenu)
 menuBtn.addEventListener('click', expandMenu)
 menuLinks.forEach(el => {
@@ -23,18 +21,9 @@ window.addEventListener('touchstart', () => {})
 window.addEventListener('touchend', () => {})
 window.addEventListener('touchcancel', () => {})
 window.addEventListener('touchmove', () => {})
-// menuContainer.addEventListener('touchstart', () => {})
-// menuContainer.addEventListener('touchend', () => {})
-// menuContainer.addEventListener('touchcancel', () => {})
-// menuContainer.addEventListener('touchmove', () => {})
-// loginBox.addEventListener('touchstart', () => {})
-// loginBox.addEventListener('touchend', () => {})
-// loginBox.addEventListener('touchcancel', () => {})
-// loginBox.addEventListener('touchmove', () => {})
 
 function expandMenu(){
     console.log('menu expanding...')
-    // menuBtn.classList.add('hidden')
     menuContainer.style.display = 'flex'
     menuContainer.style.top = '50px'
     menuBtn.removeEventListener('click', expandMenu)
@@ -45,7 +34,6 @@ function expandMenu(){
 
 function contractMenu(){
     menuContainer.style.top = '-100vh'
-    // menuContainer.style.display = 'none'
     menuBtn.removeEventListener('click', contractMenu)
     menuBtn.addEventListener('click', expandMenu)
 }
@@ -75,17 +63,3 @@ function rotateImages(){
     repeater();
 }
 rotateImages()
-
-function portalDropdown(){
-    portalBtn.removeEventListener('click', portalDropdown)
-    login.classList.remove('hidden')
-
-    setTimeout(() => window.addEventListener('click', removePortalDropdown), 1)
-}
-
-function removePortalDropdown(){
-    window.removeEventListener('click', removePortalDropdown)
-    login.classList.add('hidden')
-
-    portalBtn.addEventListener('click', portalDropdown)
-}
